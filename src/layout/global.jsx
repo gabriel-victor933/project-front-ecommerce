@@ -1,5 +1,6 @@
 import {  Grid2 as Grid } from "@mui/material";
 import { Outlet } from "react-router-dom";
+import Header from "../sections/Header";
 
 export default function Global(){
 
@@ -8,7 +9,7 @@ export default function Global(){
             container
             flexDirection={'column'}    
         >
-            <>Header</>
+            <Header />
             <Outlet />
             <>Footer</>
         </Grid>

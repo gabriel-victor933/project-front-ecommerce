@@ -42,32 +42,80 @@ export const theme = createTheme({
                 h1: {
                     fontSize: '48px',
                     fontWeight: '600',
-                    color: 'grey.10'
+                    color: 'grey.10',
+
+                    '@media(max-width: 1440px)': {
+                        fontSize: '38px'
+                    },
+
+                    '@media(max-width: 900px)': {
+                        fontSize: '28px'
+                    },
                 },
                 h2: {
                     fontSize: '34px',
                     fontWeight: '600',
-                    color: 'grey.10'
+                    color: 'grey.10',
+
+                    '@media(max-width: 1440px)': {
+                        fontSize: '26px'
+                    },
+
+                    '@media(max-width: 900px)': {
+                        fontSize: '20px'
+                    },
                 },
                 h3: {
                     fontSize: '24px',
                     fontWeight: '600',
-                    color: 'grey.10'
+                    color: 'grey.10',
+
+                    '@media(max-width: 1440px)': {
+                        fontSize: '18px'
+                    },
+
+                    '@media(max-width: 900px)': {
+                        fontSize: '16px'
+                    },
                 },
                 h4: {
                     fontSize: '20px',
                     fontWeight: '400',
-                    color: 'grey.60'
+                    color: 'grey.60',
+
+                    '@media(max-width: 1440px)': {
+                        fontSize: '18px'
+                    },
+
+                    '@media(max-width: 900px)': {
+                        fontSize: '16px'
+                    },
                 },
                 h5: {
                     fontSize: '18px',
                     fontWeight: '600',
-                    color: 'grey.60'
+                    color: 'grey.60',
+
+                    '@media(max-width: 1440px)': {
+                        fontSize: '14px'
+                    },
+
+                    '@media(max-width: 900px)': {
+                        fontSize: '14px'
+                    },
                 },
                 h6: {
                     fontSize: '18px',
                     fontWeight: '400',
-                    color: 'grey.40'
+                    color: 'grey.40',
+
+                    '@media(max-width: 1440px)': {
+                        fontSize: '14px'
+                    },
+
+                    '@media(max-width: 900px)': {
+                        fontSize: '14px'
+                    },
                 },
                 p: {
                     fontSize: '16px',
@@ -136,6 +184,11 @@ export const theme = createTheme({
                     color: '#98989A',
                 }
             }
+        }
+    },
+    breakpoints: {
+        values: {
+            xl: 1440
         }
     }
 })
