@@ -80,13 +80,61 @@ export const theme = createTheme({
         MuiButton: {
             styleOverrides: {
                 root: {
+                },
+                containedPrimary: {
                     backgroundColor: '#FFD500',
                     width: 'fit-content',
-                    padding: '8px 30px 8px 30px',
+                    padding: '9px 30px 9px 30px',
+                    borderRadius: '32px',
+                    color: '#262626',
+                    textTransform: 'none',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    boxShadow: 'none'
                 },
-               containedPrimary: {
-                backgroundColor: 'red'
-               }
+                containedSecondary: {
+                    backgroundColor: '#262626',
+                    width: 'fit-content',
+                    padding: '9px 30px 9px 30px',
+                    borderRadius: '32px',
+                    color: '#FFFFFF',
+                    textTransform: 'none',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    boxShadow: 'none'
+                },
+                
+                outlinedPrimary: {
+                    width: 'fit-content',
+                    padding: '9px 30px 9px 30px',
+                    borderRadius: '100px',
+                    border: '1px solid #F1F1F3',
+                    color: '#262626',
+                    textTransform: 'none',
+                    fontSize: '18px',
+                    fontWeight: '400',
+                    boxShadow: 'none'
+                },
+                outlinedSecondary: {
+                    backgroundColor: '#F7F7F8',
+                    width: 'fit-content',
+                    padding: '9px 30px 9px 30px',
+                    borderRadius: '32px',
+                    color: '#4C4C4D',
+                    textTransform: 'none',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    boxShadow: 'none',
+                    border: '1px solid #F1F1F3',
+                },
+                textPrimary: {
+                    width: 'fit-content',
+                    padding: '9px 30px 9px 30px',
+                    textTransform: 'uppercase',
+                    fontSize: '20px',
+                    fontWeight: '400',
+                    color: '#98989A',
+                }
             }
         }
     }
