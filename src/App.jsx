@@ -13,9 +13,8 @@ function App() {
       <Routes>
           <Route path='/' element={<Global />} >
               <Route index element={<>home</>}/>
-              <Route path='products' element={<>products</>}/>
-              <Route path='product'>
-                  <Route index element={<>not found</>}/>
+              <Route path='products'>
+                  <Route index element={<>Products</>}/>
                   <Route path=':id' element={<>id</>}/>
               </Route>
               <Route path='support' element={<>suport</>}/>

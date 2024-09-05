@@ -1,9 +1,12 @@
-import { Button, Grid2, Typography, Box } from "@mui/material";
+import {  Grid2, Typography } from "@mui/material";
 import ArrowOutwardOutlinedIcon from '@mui/icons-material/ArrowOutwardOutlined';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Logo from '/Logo.png'
+import useBreakpointUp from "../hooks/useBreakpoints";
+import MenuDesktop from "../components/header/MenuDesktop";
+import MenuMobile from "../components/header/MenuMobile";
 
 export default function Header(){
+
+    const isMdUp = useBreakpointUp('md')
 
     return (
         <Grid2 container>
@@ -24,32 +27,7 @@ export default function Header(){
                     <ArrowOutwardOutlinedIcon color='#FFF' sx={{verticalAlign: 'text-top', ml: 1}}/>
                 </Typography>
             </Grid2>
-            <Grid2 
-                item
-                display={'flex'}
-                width={'100%'}
-                height={'95px'}
-                px={'162px'}
-                alignItems={'center'}                
-                borderBottom={'1px solid #F1F1F3'}
-                columnGap={'10px'}
-            >
-                <Button variant='outlined' color='primary'>Home</Button>
-                <Button variant='outlined' color='primary'>Products</Button>
-                <Box
-                    sx={{
-                        height: '60px',
-                        width: '60px',
-                        backgroundImage: `url(${Logo})`,
-                        mx: 'auto'
-                    }}
-                >
-                </Box>
-                <Button variant='contained' color='primary' sx={{borderRadius: '50%', p: 0, height: '53px'}}>
-                    <ShoppingCartIcon />
-                </Button>
-                <Button variant='outlined' color='primary'>Contact Support</Button>
-            </Grid2>
+            {isMdUp ? <MenuDesktop /> : <MenuMobile />}
         </Grid2>
     )
 }
