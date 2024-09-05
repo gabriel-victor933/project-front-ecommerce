@@ -9,7 +9,7 @@ export default function Header(){
     const isMdUp = useBreakpointUp('md')
 
     return (
-        <Grid2 container>
+        <Grid2 container component='header'>
             <Grid2 
                 item
                 display={'flex'}

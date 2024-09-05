@@ -1,6 +1,7 @@
 import {  Grid2 as Grid } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import Header from "../sections/Header";
+import Footer from "../sections/Footer";
 
 export default function Global(){
 
@@ -23,12 +24,11 @@ export default function Global(){
                     '@media(max-width: 900px)': {
                     px: '16px',
                     },
-                    bgcolor: 'yellow'
                 }}
             >
-                main
+                <Outlet />
             </Grid>
-            <Outlet />
+            <Footer />
         </Grid>
         
     )
