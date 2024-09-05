@@ -59,6 +59,9 @@ export default function MenuMobile() {
             <IconButton
                 disableRipple={true}
                 onClick={handleClick}
+                sx={{
+                    pr: 0,
+                }}
             >
                 <SegmentSharpIcon sx={{ fontSize: '35px', color: 'grey.10' }} />
             </IconButton>
