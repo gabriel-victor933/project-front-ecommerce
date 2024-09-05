@@ -1,210 +1,54 @@
-import { Grid2, Typography, Box, IconButton, Button } from "@mui/material";
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import XIcon from '@mui/icons-material/X';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import Logo from '/LogoMed.png'
-import TextInput from "../components/footer/TextInput";
+import {  Snackbar } from "@mui/material";
 import { useState } from "react";
+import useBreakpointUp from "../hooks/useBreakpointUp";
+import FooterDesktop from "../components/footer/FooterDesktop";
+import FooterMobile from "../components/footer/FooterMobile";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
 
-    const [input, setInput] = useState()
-    console.log(input)
+    const nav = useNavigate()
+
+    const [input, setInput] = useState('')
+    const [error, setError] = useState(false)
+    const [openSnack, setOpenSnack] = useState(false)
+
+    const isMdUp = useBreakpointUp('md')
+
+    function saveEmail(){
+
+        if(input.length == 0) {
+            setError(true)
+            return
+        }
+
+        setError(false)
+        setOpenSnack(true)
+    }
+
     return (
         <>
-            <Grid2
-                display={'grid'}
-
+            {isMdUp ? 
+                <FooterDesktop saveEmail={saveEmail} error={error} setInput={setInput} nav={nav}/> 
+                : 
+                <FooterMobile saveEmail={saveEmail} error={error} setInput={setInput} nav={nav}/>
+                }
+            <Snackbar 
+                open={openSnack}
+                autoHideDuration={3000}
+                onClose={() => setOpenSnack(false)}
+                TransitionComponent={'Fade'}
+                message="Email has been saved"
                 sx={{
-                    gridTemplateColumns: '5fr 7fr',
-                    height: '368px',
-                    px: '162px',
-                    borderTop: '1px solid #F1F1F3',
-
-                    '@media(max-width: 1440px)': {
-                        px: '80px',
-                    },
-
-                    '@media(max-width: 900px)': {
-                        px: '16px',
-                    },
-
+                    width: '300px',
+                    
+                    '& .MuiPaper-root': {
+                        backgroundColor: 'yellow.97',
+                        color: 'grey.15',
+                        fontSize: '18px'
+                    }
                 }}
-            >
-                <Grid2
-                    display={'flex'}
-                    flexDirection={'column'}
-                    justifyContent={'center'}
-                    alignItems={'center'}
-                    rowGap='50px'
-                >
-                    <Box
-                        sx={{
-                            height: '100px',
-                            width: '100px',
-                            backgroundImage: `url(${Logo})`,
-                            backgroundSize: 'contain',
-                            mr: 'auto',
-                        }}
-                    >
-                    </Box>
-                    <Box 
-                         sx={{
-                            display: 'flex',
-                            gap: '10px',
-                            mr: 'auto'
-                        }}
-                    >
-                        <TextInput 
-                            onChange={(e) => setInput(e.target.value)}
-                            placeholder={'Enter Your Email'}
-                        />
-                        <Button variant='contained' color='primary'>
-                            Subscribe
-                        </Button>
-                    </Box>
-                </Grid2>
-                <Grid2
-                    display='flex'
-                    justifyContent={'space-evenly'}
-                    alignItems={'center'}
-
-                >
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            rowGap: '18px',
-
-                            '& h6, h4': {
-                                cursor: 'pointer'
-                            }
-                        }}
-                    >
-                        <Typography variant='h4' color='grey.15' mb='18px'>Home</Typography>
-                        <Typography variant='h6' color='grey.40'>Features</Typography>
-                        <Typography variant='h6' color='grey.40'>Popular Products</Typography>
-                        <Typography variant='h6' color='grey.40'>Testimonials</Typography>
-                        <Typography variant='h6' color='grey.40'>FAQ</Typography>
-                    </Box>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            rowGap: '18px',
-
-                            '& h6, h4': {
-                                cursor: 'pointer'
-                            }
-                        }}
-                    >
-                        <Typography variant='h4' color='grey.15' mb='18px'>Menswear</Typography>
-                        <Typography variant='h6' color='grey.40'>Casual</Typography>
-                        <Typography variant='h6' color='grey.40'>Formal</Typography>
-                        <Typography variant='h6' color='grey.40'>Party</Typography>
-                        <Typography variant='h6' color='grey.40'>Business</Typography>
-                    </Box>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            rowGap: '18px',
-
-                            '& h6, h4': {
-                                cursor: 'pointer'
-                            }
-                        }}
-                    >
-                        <Typography variant='h4' color='grey.15' mb='18px'>Womenswear</Typography>
-                        <Typography variant='h6' color='grey.40'>Casual</Typography>
-                        <Typography variant='h6' color='grey.40'>Formal</Typography>
-                        <Typography variant='h6' color='grey.40'>Party</Typography>
-                        <Typography variant='h6' color='grey.40'>Business</Typography>
-                    </Box>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            rowGap: '18px',
-
-                            '& h6, h4': {
-                                cursor: 'pointer'
-                            }
-                        }}
-                    >
-                        <Typography variant='h4' color='grey.15' mb='18px'>Kidswear</Typography>
-                        <Typography variant='h6' color='grey.40'>Casual</Typography>
-                        <Typography variant='h6' color='grey.40'>Formal</Typography>
-                        <Typography variant='h6' color='grey.40'>Party</Typography>
-                        <Typography variant='h6' color='grey.40'>Business</Typography>
-                    </Box>
-                </Grid2>
-            </Grid2>
-            <Grid2
-                display='flex'
-                height='103px'
-                columnGap={4}
-                alignItems={'center'}
-                sx={{
-                    borderTop: '1px solid #F1F1F3',
-                    px: '162px',
-
-                    '@media(max-width: 1440px)': {
-                        px: '80px',
-                    },
-
-                    '@media(max-width: 900px)': {
-                        px: '16px',
-                    },
-                }}
-            >
-                <Typography variant='h6' color='grey.60'>
-                    Terms & Conditions
-                </Typography>
-                <Typography variant='h6' color='grey.60'>
-                    Privacy Policy
-                </Typography>
-                <Box
-                    sx={{
-                        mx: 'auto',
-                        display: 'flex',
-                        height: '40px',
-                        gap: '21px',
-                        pr: 3
-                    }}
-                >
-                    <IconButton
-                        disableRipple={true}
-                        sx={{
-                            bgcolor: 'grey.15',
-                            color: "absolute.white"
-                        }}
-                    >
-                        <FacebookRoundedIcon />
-                    </IconButton>
-                    <IconButton
-                        disableRipple={true}
-                        sx={{
-                            bgcolor: 'grey.15',
-                            color: "absolute.white"
-                        }}
-                    >
-                        <XIcon />
-                    </IconButton>
-                    <IconButton
-                        disableRipple={true}
-                        sx={{
-                            bgcolor: 'grey.15',
-                            color: "absolute.white"
-                        }}
-                    >
-                        <InstagramIcon />
-                    </IconButton>
-                </Box>
-                <Typography variant='h6' color='grey.60'>
-                    © 2024 Klothink. All rights reserved.
-                </Typography>
-            </Grid2>
+            />            
         </>
 
     )
