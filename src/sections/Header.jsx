@@ -1,6 +1,6 @@
 import {  Grid2, Typography } from "@mui/material";
 import ArrowOutwardOutlinedIcon from '@mui/icons-material/ArrowOutwardOutlined';
-import useBreakpointUp from "../hooks/useBreakpoints";
+import useBreakpointUp from "../hooks/useBreakpointUp";
 import MenuDesktop from "../components/header/MenuDesktop";
 import MenuMobile from "../components/header/MenuMobile";
 
