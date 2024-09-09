@@ -192,7 +192,8 @@ export const theme = createTheme({
     breakpoints: {
         values: {
             xl: 1440,
-            md: 900
+            md: 900,
+            xs: 0,
         }
     }
 })

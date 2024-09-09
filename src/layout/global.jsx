@@ -16,13 +16,16 @@ export default function Global(){
                 sx={{
                     flexGrow: 1,
                     px: '162px',
+                    pt: '80px',
 
                     '@media(max-width: 1440px)': {
-                    px: '80px',
+                        px: '80px',
+                        pt: '50px',
                     },
 
                     '@media(max-width: 900px)': {
-                    px: '16px',
+                        px: '16px',
+                        pt: '20px',
                     },
                 }}
             >

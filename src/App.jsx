@@ -3,6 +3,7 @@ import { theme } from "./style/theme"
 import { ThemeProvider } from "@mui/material"
 import {CssBaseline} from "@mui/material"
 import Global from "./layout/global"
+import Home from "./pages/Home"
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route path='/' element={<Global />} >
-              <Route index element={<>home</>}/>
+              <Route index element={<Home />}/>
               <Route path='products'>
                   <Route index element={<>Products</>}/>
                   <Route path=':id' element={<>id</>}/>
