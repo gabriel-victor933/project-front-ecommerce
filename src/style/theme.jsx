@@ -185,6 +185,17 @@ export const theme = createTheme({
                     '@media(max-width: 1440px)': {
                         fontSize: '16px',
                     }
+                },
+                textSecondary: {
+                    width: 'fit-content',
+                    textTransform: 'uppercase',
+                    fontSize: '20px',
+                    fontWeight: '600',
+                    color: '#1A1A1A',
+
+                    '@media(max-width: 1440px)': {
+                        fontSize: '16px',
+                    }
                 }
             }
         }
