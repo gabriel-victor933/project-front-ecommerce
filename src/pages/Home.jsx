@@ -1,4 +1,5 @@
 import DiscoverFashion from "../sections/home/DiscoverFashion";
+import Experience from "../sections/home/Experience";
 import MainProduct from "../sections/home/MainProduct";
 
 export default function Home(){
@@ -7,6 +8,7 @@ export default function Home(){
         <>
             <MainProduct />
             <DiscoverFashion />
+            <Experience />
         </>
     )
 }
