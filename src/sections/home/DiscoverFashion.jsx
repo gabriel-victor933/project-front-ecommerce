@@ -27,7 +27,6 @@ export default function DiscoverFashion() {
         scrollerRef.current.style.background = `linear-gradient(to right, #E4E4E7 ${init}%, #262626 ${init}%, #262626 ${final}%, #E4E4E7 ${final}%)`        
     }
 
-
     return (
         <Grid2
             my={{ md: '150px', xs: '75px' }}
@@ -42,7 +41,8 @@ export default function DiscoverFashion() {
             >
                 <Box
                     sx={{
-                        display: 'flex'
+                        display: 'flex',
+                        flexDirection: {xs: 'column-reverse', md: 'row'}
                     }}
                 >
                     <Typography variant='h1'>
@@ -52,7 +52,7 @@ export default function DiscoverFashion() {
                         Products
                     </Typography>
                 </Box>
-                <Button variant="contained" color='primary' sx={{ alignSelf: 'end', '@media(max-width: 900px)': { order: 3 } }} >
+                <Button variant="contained" color='primary' sx={{ alignSelf: 'end', '@media(max-width: 900px)': { order: 3, mt: '10px', alignSelf: 'start' } }} >
                     View All Products
                 </Button>
                 <Typography variant='h6' color='grey.40' sx={{}}>
