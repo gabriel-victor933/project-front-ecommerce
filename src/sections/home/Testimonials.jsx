@@ -73,7 +73,6 @@ export default function Testimonials() {
             </Grid2>
             <Grid2
                 sx={{
-                    maxWidth: '1600px',
                     width: '100%',
                     borderRadius: '20px',
                     bgcolor: 'white.97',

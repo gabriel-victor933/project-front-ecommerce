@@ -113,7 +113,6 @@ export default function DiscoverFashion() {
             <Grid2
                 className='wrapper'
                 sx={{
-                    maxWidth: '1600px',
                     width: '100%',
                     px: '1px'
                 }}
