@@ -4,6 +4,11 @@ import StarIcon from '@mui/icons-material/Star';
 import { useState } from "react";
 import useIsMobile from "../../hooks/useIsMobile";
 import SouthOutlinedIcon from '@mui/icons-material/SouthOutlined';  
+import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
+import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
+import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
+import CampaignOutlinedIcon from '@mui/icons-material/CampaignOutlined';
+import HikingOutlinedIcon from '@mui/icons-material/HikingOutlined';
 
 export default function Experience(){
 
@@ -53,24 +58,24 @@ export default function Experience(){
                 <ExperienceCard title={'Passionate Craftsmanship'} text={'Every garment at Klothink is crafted with passion, reflecting our commitment to quality and innovation.'}>
                     <StarIcon />
                 </ExperienceCard>
-                <ExperienceCard title={'Passionate Craftsmanship'} text={'Every garment at Klothink is crafted with passion, reflecting our commitment to quality and innovation.'}>
-                    <StarIcon />
+                <ExperienceCard title={'Fashion Forward'} text={"We're more than a brand; we're trendsetters, curating styles that empower and inspire confidence."}>
+                    <HikingOutlinedIcon />
                 </ExperienceCard>
                 
 
                 {(!isMobile || showAll) && (
                     <>
-                        <ExperienceCard title={'Passionate Craftsmanship'} text={'Every garment at Klothink is crafted with passion, reflecting our commitment to quality and innovation.'}>
-                            <StarIcon />
+                        <ExperienceCard title={'Customer-Centric Approach'} text={"At Klothink, our customers are at the heart of everything we do. Your satisfaction is our measure of success."}>
+                            <LightbulbOutlinedIcon />
                         </ExperienceCard>
-                        <ExperienceCard title={'Passionate Craftsmanship'} text={'Every garment at Klothink is crafted with passion, reflecting our commitment to quality and innovation.'}>
-                            <StarIcon />
+                        <ExperienceCard title={'Global Inspiration'} text={"Influenced by global trends, we bring you a diverse and dynamic collection."}>
+                            <CampaignOutlinedIcon />
                         </ExperienceCard>
-                        <ExperienceCard title={'Passionate Craftsmanship'} text={'Every garment at Klothink is crafted with passion, reflecting our commitment to quality and innovation.'}>
-                            <StarIcon />
+                        <ExperienceCard title={'Empowering Your Style'} text={"Beyond clothing, Klothink is a lifestyle. Join us on a journey of self-expression."}>
+                            <AutoAwesomeRoundedIcon />
                         </ExperienceCard>
-                        <ExperienceCard title={'Passionate Craftsmanship'} text={'Every garment at Klothink is crafted with passion, reflecting our commitment to quality and innovation.'}>
-                            <StarIcon />
+                        <ExperienceCard title={'Sustainable Practices'} text={"Klothink is committed to sustainability, integrating eco-friendly practices into our production process."}>
+                            <WbSunnyRoundedIcon />
                         </ExperienceCard>
                     </>
                 )}
