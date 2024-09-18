@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material"
 import {CssBaseline} from "@mui/material"
 import Global from "./layout/global"
 import Home from "./pages/Home"
+import Products from "./pages/Products"
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
           <Route path='/' element={<Global />} >
               <Route index element={<Home />}/>
               <Route path='products'>
-                  <Route index element={<>Products</>}/>
+                  <Route index element={<Products />}/>
                   <Route path=':id' element={<>id</>}/>
               </Route>
               <Route path='support' element={<>suport</>}/>

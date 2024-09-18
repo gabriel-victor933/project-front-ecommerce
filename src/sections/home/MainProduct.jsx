@@ -18,12 +18,8 @@ export default function MainProduct(){
             display={'grid'}
             sx={{
                 mb: '50px',
-                gridTemplateColumns: '11fr 9fr',
+                gridTemplateColumns: {md: '11fr 9fr', xs: '1fr'},
                 gap: {xl: '80px', md: '60px', xs: '40px' },
-
-                '@media(max-width: 900px)': {
-                    gridTemplateColumns: '1fr',
-                }
             }}
         >
             <Grid2>
