@@ -144,7 +144,6 @@ export default function Testimonials() {
                     />
                 </IconButton>
             </Grid2>
-
         </Grid2>
     )
 }
