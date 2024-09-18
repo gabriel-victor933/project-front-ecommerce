@@ -5,10 +5,17 @@ import ManIcon from '@mui/icons-material/Man';
 import WomanIcon from '@mui/icons-material/Woman';
 import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
 import { useLocation } from "react-router-dom";
+import useIsMobile from '../hooks/useIsMobile'
+import CasualCollection from "../sections/products/CasualCollection";
+import FormalCollection from "../sections/products/FormalCollection";
+import ActiveCollection from "../sections/products/ActiveCollection";
+import BusinessCollection from "../sections/products/BusinessCollection";
 
 export default function Products() {
 
     const [selected, setSelected] = useState('ALL')
+
+    const isMobile = useIsMobile()
 
     let location = useLocation();
 
@@ -62,13 +69,18 @@ export default function Products() {
                         >
                             <>
                                 {renderIcon(item)}
-                                {item}
+                                {!isMobile ? item : item == 'ALL' ? 'ALL' : ''}
+                                
                             </>
 
                         </Button>
                     ))}
                 </Box>
             </Grid2>
+            <CasualCollection selected={selected}/>
+            <FormalCollection selected={selected}/>
+            <ActiveCollection selected={selected}/>
+            <BusinessCollection selected={selected}/>
         </>
     )
 }
