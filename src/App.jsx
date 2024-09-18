@@ -5,6 +5,7 @@ import {CssBaseline} from "@mui/material"
 import Global from "./layout/global"
 import Home from "./pages/Home"
 import Products from "./pages/Products"
+import ProductById from "./pages/ProductById"
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
               <Route index element={<Home />}/>
               <Route path='products'>
                   <Route index element={<Products />}/>
-                  <Route path=':id' element={<>id</>}/>
+                  <Route path=':id' element={<ProductById />}/>
               </Route>
               <Route path='support' element={<>suport</>}/>
               <Route path='*' element={<Navigate to='/' replace={true} />}/>
