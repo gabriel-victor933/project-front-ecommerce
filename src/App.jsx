@@ -6,6 +6,7 @@ import Global from "./layout/global"
 import Home from "./pages/Home"
 import Products from "./pages/Products"
 import ProductById from "./pages/ProductById"
+import Support from "./pages/Support"
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
                   <Route index element={<Products />}/>
                   <Route path=':id' element={<ProductById />}/>
               </Route>
-              <Route path='support' element={<>suport</>}/>
+              <Route path='support' element={<Support />}/>
               <Route path='*' element={<Navigate to='/' replace={true} />}/>
           </Route>
       </Routes>
