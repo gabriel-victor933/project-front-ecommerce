@@ -1,4 +1,4 @@
-import ProductSlider from "../../components/product/ProductSlider";
+import ProductSlider from "../../components/products/ProductSlider";
 
 // eslint-disable-next-line react/prop-types
 export default function ActiveCollection({ selected }){
