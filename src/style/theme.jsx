@@ -9,7 +9,7 @@ export const theme = createTheme({
         yellow: {
             50: '#FFD500',
             55: '#FFD81A',
-            70: '#FF3566',
+            70: '#FFE566',
             80: '#FFEE99',
             90: '#FFF6CC',
             95: '#FFFAE5',

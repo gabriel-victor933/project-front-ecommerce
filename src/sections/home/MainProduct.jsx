@@ -138,9 +138,10 @@ export default function MainProduct(){
                         borderRadius: '20px',
                         backgroundColor: 'white.95',
                         backgroundImage: `url(${selectedImg})`,
-                        backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                         position: 'relative',
+                        backgroundSize: {xl: '80%', md: '90%', xs: '90%'},
+                        backgroundRepeat: 'no-repeat',
+                        position: 'relative',
 
                         '@media(max-width: 900px)': {
                             backgroundSize: '100% 100%',

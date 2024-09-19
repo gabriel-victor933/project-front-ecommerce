@@ -1,7 +1,6 @@
 import { Box, IconButton, Typography } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-
 // eslint-disable-next-line react/prop-types
 export default function ProductCard({ img, cardRef }) {
 
